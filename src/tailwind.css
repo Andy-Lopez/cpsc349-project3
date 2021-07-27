@@ -39,6 +39,9 @@
     .animate_h1{
         @apply text-center py-10 animate-pulse h-16 w-full
     }
+    .main_tag{
+        @apply text-center border-2
+    }
 
     .navbar{
         @apply grid grid-cols-2 bg-gray-900 overflow-hidden pl-10 mt-12

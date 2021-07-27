@@ -663,6 +663,11 @@ a{
   text-align: center
 }
 
+.main_tag{
+  border-width: 2px;
+  text-align: center
+}
+
 .navbar{
   margin-top: 3rem;
   display: grid;
