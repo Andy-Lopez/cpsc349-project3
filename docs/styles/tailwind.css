@@ -588,6 +588,29 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
+h1{
+  color: red;
+  font-family: serif;
+  font-size: 4rem;
+}
+
+h3{
+  font-family: san-serif;
+  font-size: 2rem;
+}
+
+p{
+  color: green
+}
+
+li{
+  color: green
+}
+
+a{
+  color: blue
+}
+
 .container {
   width: 100%;
 }
@@ -622,11 +645,103 @@ video {
   }
 }
 
-.custom-tailwind {
+.header_footer {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity))
+}
+
+.animate_h1{
+  height: 4rem;
+  width: 100%;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center
+}
+
+.navbar{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  padding-left: 2.5rem
+}
+
+.nav_link:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(120, 53, 15, var(--tw-bg-opacity));
+}
+
+.nav_link {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.grid_layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem
+}
+
+.grid_layout2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem
+}
+
+.hoover_li {
+  padding-top: 1rem
+}
+
+.hoover_li:hover {
+  --tw-text-opacity: 1;
+  color: rgba(76, 29, 149, var(--tw-text-opacity));
+}
+
+.hooverPurple:hover {
+  --tw-text-opacity: 1;
+  color: rgba(76, 29, 149, var(--tw-text-opacity));
+}
+
+.hooverBlue{
+  --tw-text-opacity: 1;
+  color: rgba(59, 130, 246, var(--tw-text-opacity))
+}
+
+.hooverBlue:hover {
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
+  text-decoration: underline;
+}
+
+.photo_links {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(6, 78, 59, var(--tw-text-opacity))
+}
+
+.photo_links:hover {
+  --tw-text-opacity: 1;
+  color: rgba(153, 27, 27, var(--tw-text-opacity));
+}
+
+.bluebold{
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+  font-weight: 700
+}
+
+.pagination_bar {
+  text-align: center;
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
+  color: rgba(6, 95, 70, var(--tw-text-opacity))
 }
 
 .sr-only {
@@ -32238,6 +32353,8 @@ video {
 .content-none {
   content: none;
 }
+
+/*  style for h1 */
 
 /* Custom Tailwind classes go here */
 
