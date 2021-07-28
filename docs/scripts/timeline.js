@@ -62,7 +62,7 @@ var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
 //      display.textContent= result
 //     // display.textContent = JSON.stringify(timeline, null, 2)
 //  }
-if(sPage === "publishTimeline.html"){
+if(sPage === "publishtimeline.html"){
     var timeline = mockroblog.getPublicTimeline();
     var container
     container = document.getElementById('timeline-json');
@@ -78,7 +78,7 @@ if(sPage === "publishTimeline.html"){
         container.innerHTML+="<br>"
 }
  }
- else if (sPage === "userTimeline.html"){
+ else if (sPage === "usertimeline.html"){
     var logged_in_user = localStorage.getItem("user_name")
     var timeline = mockroblog.getUserTimeline(logged_in_user);
     var container
@@ -95,7 +95,7 @@ if(sPage === "publishTimeline.html"){
         container.innerHTML+="<br>"
 }
  }
- else if (sPage === "homeTimeline.html"){
+ else if (sPage === "hometimeline.html"){
     var logged_in_user = localStorage.getItem("user_name")
     var timeline = mockroblog.getHomeTimeline(logged_in_user);
     var container
