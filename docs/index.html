@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta charset="utf-8">
         <title>Login - Twitter-0.0</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/styles/tailwind.css">
-       
+        <script defer src="scripts/login.js" type="module"></script>  
     </head>
     <body >
          <!-- Added site name to header/NAV -->
@@ -15,11 +16,13 @@
         <h1 class="animate_h1">Twitter Version 0.0</h1>
 
       
+
          
     </header>
     
     <section class="text-gray-600 body-font">
-        <form method="post" action="home.html">
+        <!-- <form method="post" action="javascript:getFormData();"> -->
+            <form id="login-form">
             <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
           
                 <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
@@ -29,21 +32,25 @@
                 <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                     <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Login</h2>
                     <div class="relative mb-4">
-                    <label for="full-name" class="leading-7 text-sm text-gray-600">Username:</label>
-                    <input type="text" id="full-name" name="full-name" placeholder="Enter Username"  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <label for="username" class="leading-7 text-sm text-gray-600">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username"  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                 </div>
                 <div class="relative mb-4">
                     <label for="password" class="leading-7 text-sm text-gray-600">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Enter password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                 </div>
+                <!-- <div id="login-error-msg-holder">
+                    <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+                  </div> -->
                     <a  href="password.html">Forgot Password?</a>
-                    <input type="submit" value= " Login " class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"/></br>
+                    <input type="submit" value= "Login" id="login-form-submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"/></br>
                 <div class="card-footer text-center">
                     <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
                 </div>                
             
             </div>
         </form>
+
       </section>
        
                 

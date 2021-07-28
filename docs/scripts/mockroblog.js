@@ -9,6 +9,7 @@ export function createUser (username, email, password) {
       password: password
     }
   }
+  return null
 }
 
 export function authenticateUser (username, password) {

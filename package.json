@@ -26,5 +26,8 @@
     "tailwindcss": "^2.2.4"
   },
   "keywords": [],
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  }
 }
