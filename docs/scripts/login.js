@@ -17,7 +17,7 @@ loginButton.addEventListener("click", (e) => {
     // if (username === "user" && password === "web_dev") {
         if (result != null){
         // alert("You have successfully logged in.");
-        window.location.replace("/home.html");
+        window.location.replace("/usertimeline.html");
         localStorage.setItem("user_name",username);
         // location.reload();
     } else {
