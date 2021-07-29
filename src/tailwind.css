@@ -78,9 +78,13 @@
         @apply text-green-800  text-center  font-bold
     }
   
+    .a_highligh {
+        @apply focus:outline-none text-lg hover:bg-gray-400 rounded
+    }
   
-  
-  
+    .divD{
+        @apply flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition
+    }
   
   
 
