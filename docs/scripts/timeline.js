@@ -66,16 +66,17 @@ if(sPage === "publishtimeline.html"){
     var timeline = mockroblog.getPublicTimeline();
     var container
     container = document.getElementById('timeline-json');
+  
+        for (let i = 0; i < timeline.length; i++) {
+            var username = getUserbyID(timeline[i].user_id)
+            container.innerHTML+="<ul class='timeline_list'>"
+            container.innerHTML+= "<li class='divD'>"+timeline[i].timestamp+"</li>"
+            container.innerHTML+= "<li class='divD'>"+username.username+"</li>"
+            container.innerHTML+= "<li>"+timeline[i].text+"</li>"
+            container.innerHTML+="</ul>"
+            container.innerHTML+="<br>"
+            container.innerHTML+="<br>"
     
-    for (let i = 0; i < timeline.length; i++) {
-        var username = getUserbyID(timeline[i].user_id)
-        container.innerHTML+="<ul class='timeline_list'>"
-        container.innerHTML+= "<li>"+timeline[i].timestamp+"</li>"
-        container.innerHTML+= "<li>"+username.username+"</li>"
-        container.innerHTML+= "<li>"+timeline[i].text+"</li>"
-        container.innerHTML+="</ul>"
-        container.innerHTML+="<br>"
-        container.innerHTML+="<br>"
 }
  }
  else if (sPage === "usertimeline.html"){
