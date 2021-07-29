@@ -93,6 +93,7 @@ if(sPage === "publishtimeline.html"){
         container.innerHTML+="</ul>"
         container.innerHTML+="<br>"
         container.innerHTML+="<br>"
+        
 }
  }
  else if (sPage === "hometimeline.html"){
