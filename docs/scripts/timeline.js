@@ -1,39 +1,36 @@
 import * as mockroblog from './mockroblog.js'
 
-
-
 export function getUserbyID (id) {
-    if (id === 1) {
-      return {
-        id: 1,
-        username: 'ProfAvery',
-        email: 'kavery@fullerton.edu',
-        password: 'password'
-      }
-    } else if (id === 2) {
-      return {
-        id: 2,
-        username: 'KevinAWortman',
-        email: 'kwortman@fullerton.edu',
-        password: 'qwerty'
-      }
-    } else if (id === 3) {
-      return {
-        id: 3,
-        username: 'Beth_CSUF',
-        email: 'beth.harnick.shapiro@fullerton.edu',
-        password: 'secret'
-      }
+  if (id === 1) {
+    return {
+      id: 1,
+      username: 'ProfAvery',
+      email: 'kavery@fullerton.edu',
+      password: 'password'
     }
-  
-    return null
+  } else if (id === 2) {
+    return {
+      id: 2,
+      username: 'KevinAWortman',
+      email: 'kwortman@fullerton.edu',
+      password: 'qwerty'
+    }
+  } else if (id === 3) {
+    return {
+      id: 3,
+      username: 'Beth_CSUF',
+      email: 'beth.harnick.shapiro@fullerton.edu',
+      password: 'secret'
+    }
   }
 
+  return null
+}
 
 // export function publicTimeline(){
 //     var timeline = mockroblog.getPublicTimeline();
 //     container = document.getElementById('timeline-json');
-    
+
 //     for (let i = 0; i < timeline.length; i++) {
 //         var username = getUserbyID(timeline[i].user_id)
 //         container.innerHTML+="<ul>"
@@ -43,16 +40,11 @@ export function getUserbyID (id) {
 //         container.innerHTML+="</ul>"
 // }
 
-
-
 // }
 
-
-
-var sPath = window.location.pathname;
-var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+const sPath = window.location.pathname
+const sPage = sPath.substring(sPath.lastIndexOf('/') + 1)
 // window.onload = alert(localStorage.getItem("user_name"));
-
 
 // if(sPage === "publishTimeline.html"){
 //     window.mockroblog = mockroblog
@@ -62,66 +54,52 @@ var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
 //      display.textContent= result
 //     // display.textContent = JSON.stringify(timeline, null, 2)
 //  }
-if(sPage === "publishtimeline.html"){
-  var timeline = mockroblog.getPublicTimeline();
+if (sPage === 'publishtimeline.html') {
+  var timeline = mockroblog.getPublicTimeline()
   var container
-  container = document.getElementById('timeline-json');
+  container = document.getElementById('timeline-json')
 
-      for (let i = 0; i < timeline.length; i++) {
-          var username = getUserbyID(timeline[i].user_id)
-          container.innerHTML+="<li class='divD' >"
-          + "<div class=''>"+"<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>"
-              + "<div class='div_timeline'>"+ "<a class='a_timeline'>"+ username.username+ "</a> <span class='span_timeline2'>"
-              +timeline[i].text+"</span> </div>"
-          +"</div>"
-          + "<div >"+timeline[i].timestamp+"</div>"                      
-          + "</li>"
-          container.innerHTML+="<br>"
-    
-}
- }
- else if (sPage === "usertimeline.html"){
-    var logged_in_user = localStorage.getItem("user_name")
-    var timeline = mockroblog.getUserTimeline(logged_in_user);
-    var container
-    container = document.getElementById('timeline-json');
-    
-    for (let i = 0; i < timeline.length; i++) {
-        var username = getUserbyID(timeline[i].user_id)
-        container.innerHTML+="<ul class='timeline_list'>"
-        container.innerHTML+= "<li>"+timeline[i].timestamp+"</li>"
-        container.innerHTML+= "<li>"+username.username+"</li>"
-        container.innerHTML+= "<li>"+timeline[i].text+"</li>"
-        container.innerHTML+="</ul>"
-        container.innerHTML+="<br>"
-        container.innerHTML+="<br>"
-        
-}
- }
- else if (sPage === "hometimeline.html"){
-    var logged_in_user = localStorage.getItem("user_name")
-    var timeline = mockroblog.getHomeTimeline(logged_in_user);
-    var container
-    container = document.getElementById('timeline-json');
-    
-    for (let i = 0; i < timeline.length; i++) {
-        var username = getUserbyID(timeline[i].user_id)
-        container.innerHTML+="<ul class='timeline_list'>"
-        container.innerHTML+= "<li>"+timeline[i].timestamp+"</li>"
-        container.innerHTML+= "<li>"+username.username+"</li>"
-        container.innerHTML+= "<li>"+timeline[i].text+"</li>"
-        container.innerHTML+="</ul>"
-        container.innerHTML+="<br>"
-        container.innerHTML+="<br>"
-}
- }
+  for (let i = 0; i < timeline.length; i++) {
+    var username = getUserbyID(timeline[i].user_id)
+    container.innerHTML += "<li class='divD' >" +
+          "<div class=''>" + "<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>" +
+              "<div class='div_timeline'>" + "<a href='usertimeline.html?" + username.username + "'class='a_timeline'>" + username.username + "</a> <span class='span_timeline2'>" +
+              timeline[i].text + '</span> </div>' +
+          '</div>' +
+          '<div >' + timeline[i].timestamp + '</div>' +
+          '</li>'
+    container.innerHTML += '<br>'
+  }
+} else if (sPage === 'usertimeline.html') {
+  var logged_in_user = localStorage.getItem('user_name')
+  var timeline = mockroblog.getUserTimeline(logged_in_user)
+  var container
+  container = document.getElementById('timeline-json')
 
-const buttons = document.querySelectorAll('.a_timeline');
+  for (let i = 0; i < timeline.length; i++) {
+    var username = getUserbyID(timeline[i].user_id)
+    container.innerHTML += "<ul class='timeline_list'>"
+    container.innerHTML += '<li>' + timeline[i].timestamp + '</li>'
+    container.innerHTML += '<li>' + username.username + '</li>'
+    container.innerHTML += '<li>' + timeline[i].text + '</li>'
+    container.innerHTML += '</ul>'
+    container.innerHTML += '<br>'
+    container.innerHTML += '<br>'
+  }
+} else if (sPage === 'hometimeline.html') {
+  var logged_in_user = localStorage.getItem('user_name')
+  var timeline = mockroblog.getHomeTimeline(logged_in_user)
+  var container
+  container = document.getElementById('timeline-json')
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].onclick = hello;
-}
-
-function hello() {
-alert("Hi");
+  for (let i = 0; i < timeline.length; i++) {
+    var username = getUserbyID(timeline[i].user_id)
+    container.innerHTML += "<ul class='timeline_list'>"
+    container.innerHTML += '<li>' + timeline[i].timestamp + '</li>'
+    container.innerHTML += '<li>' + username.username + '</li>'
+    container.innerHTML += '<li>' + timeline[i].text + '</li>'
+    container.innerHTML += '</ul>'
+    container.innerHTML += '<br>'
+    container.innerHTML += '<br>'
+  }
 }
