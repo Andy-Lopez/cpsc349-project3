@@ -116,7 +116,7 @@ if(sPage === "publishtimeline.html"){
 }
  }
 
-const buttons = document.querySelectorAll('a');
+const buttons = document.querySelectorAll('.a_timeline');
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].onclick = hello;
