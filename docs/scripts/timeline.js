@@ -70,7 +70,7 @@ if(sPage === "publishtimeline.html"){
       for (let i = 0; i < timeline.length; i++) {
           var username = getUserbyID(timeline[i].user_id)
           container.innerHTML+="<li class='divD' >"
-          + "<div class='flex-none'>"+"<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>"
+          + "<div class=''>"+"<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>"
               + "<div class='div_timeline'>"+ "<a class='a_timeline'>"+ username.username+ "</a> <span class='span_timeline2'>"
               +timeline[i].text+"</span> </div>"
           +"</div>"
