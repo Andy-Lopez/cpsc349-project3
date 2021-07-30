@@ -793,6 +793,32 @@ a{
   transition-duration: 150ms;
 }
 
+.div_timeline{
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column
+}
+
+.a_timeline{
+  font-weight: 500;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(6, 78, 59, var(--tw-text-opacity))
+}
+
+.a_timeline:hover {
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
+}
+
+.span_timeline2{
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity))
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
