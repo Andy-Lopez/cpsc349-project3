@@ -24,6 +24,7 @@
          
     </header>
     
+     
     <section class="text-gray-600 body-font">
         <!-- <form method="post" action="javascript:getFormData();"> -->
             <form id="login-form">
@@ -37,17 +38,18 @@
                     <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Login</h2>
                     <div class="relative mb-4">
                     <label for="username" class="leading-7 text-sm text-gray-600">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Enter Username"  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <input type="text" id="username" name="username" placeholder="Enter Username"  class="form_input"
+                    pattern="[a-zA-Z\d\.\s]{3,28}"  title="Name must between 3 and 12 character and contain only letters, numbers and periods." required>
                 </div>
                 <div class="relative mb-4">
                     <label for="password" class="leading-7 text-sm text-gray-600">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    <input type="password" id="password" name="password" placeholder="Enter password" class="form_input" required>
                 </div>
                 <!-- <div id="login-error-msg-holder">
                     <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
                   </div> -->
                     <a  href="password.html">Forgot Password?</a>
-                    <input type="submit" value= "Login" id="login-form-submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"/></br>
+                    <input type="submit" value= "Login" id="login-form-submit" class="form_input_pass"/></br>
                 <div class="card-footer text-center">
                     <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
                 </div>                
@@ -56,6 +58,7 @@
         </form>
 
       </section>
+       
        
                 
         <!-- Implemented Footer on the page. Added a line break for easy consumption.  -->
