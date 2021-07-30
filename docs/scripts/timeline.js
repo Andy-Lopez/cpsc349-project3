@@ -70,8 +70,8 @@ if(sPage === "publishtimeline.html"){
       for (let i = 0; i < timeline.length; i++) {
           var username = getUserbyID(timeline[i].user_id)
           container.innerHTML+="<li class='divD' >"
-          + "<div class='flex-none'>"+"<img src='https://i.imgur.com/aq39RMA.jpg' width='40' height='40' class='rounded-full'>"
-              + "<div class='div_timeline'>"+ "<a href='' class='a_timeline'>"+ username.username+ "</a> <span class='span_timeline2'>"
+          + "<div class='flex-none'>"+"<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>"
+              + "<div class='div_timeline'>"+ "<a class='a_timeline'>"+ username.username+ "</a> <span class='span_timeline2'>"
               +timeline[i].text+"</span> </div>"
           +"</div>"
           + "<div >"+timeline[i].timestamp+"</div>"                      
@@ -115,3 +115,13 @@ if(sPage === "publishtimeline.html"){
         container.innerHTML+="<br>"
 }
  }
+
+const buttons = document.querySelectorAll('a');
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = hello;
+}
+
+function hello() {
+alert("Hi");
+}
