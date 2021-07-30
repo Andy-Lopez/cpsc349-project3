@@ -123,12 +123,13 @@ if (sPage === 'publishtimeline.html') {
 
   for (let i = 0; i < timeline.length; i++) {
     var username = getUserbyID(timeline[i].user_id)
-    container.innerHTML += "<ul class='timeline_list'>"
-    container.innerHTML += '<li>' + timeline[i].timestamp + '</li>'
-    container.innerHTML += '<li>' + username.username + '</li>'
-    container.innerHTML += '<li>' + timeline[i].text + '</li>'
-    container.innerHTML += '</ul>'
-    container.innerHTML += '<br>'
+    container.innerHTML += "<li class='divD' >" +
+          "<div class=''>" + "<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>" +
+              "<div class='div_timeline'>" + "<a href='usertimeline.html?username=" + username.username + "'class='a_timeline'>" + username.username + "</a> <span class='span_timeline2'>" +
+              timeline[i].text + '</span> </div>' +
+          '</div>' +
+          '<div >' + timeline[i].timestamp + '</div>' +
+          '</li>'
     container.innerHTML += '<br>'
   }
 } else if (sPage === 'hometimeline.html') {
@@ -139,12 +140,13 @@ if (sPage === 'publishtimeline.html') {
 
   for (let i = 0; i < timeline.length; i++) {
     var username = getUserbyID(timeline[i].user_id)
-    container.innerHTML += "<ul class='timeline_list'>"
-    container.innerHTML += '<li>' + timeline[i].timestamp + '</li>'
-    container.innerHTML += '<li>' + username.username + '</li>'
-    container.innerHTML += '<li>' + timeline[i].text + '</li>'
-    container.innerHTML += '</ul>'
-    container.innerHTML += '<br>'
+    container.innerHTML += "<li class='divD' >" +
+          "<div class=''>" + "<img src='https://i.pravatar.cc/50' width='40' height='40' class='rounded-full'>" +
+              "<div class='div_timeline'>" + "<a href='usertimeline.html?username=" + username.username + "'class='a_timeline'>" + username.username + "</a> <span class='span_timeline2'>" +
+              timeline[i].text + '</span> </div>' +
+          '</div>' +
+          '<div >' + timeline[i].timestamp + '</div>' +
+          '</li>'
     container.innerHTML += '<br>'
   }
 }
