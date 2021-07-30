@@ -63,19 +63,20 @@ var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
 //     // display.textContent = JSON.stringify(timeline, null, 2)
 //  }
 if(sPage === "publishtimeline.html"){
-    var timeline = mockroblog.getPublicTimeline();
-    var container
-    container = document.getElementById('timeline-json');
-  
-        for (let i = 0; i < timeline.length; i++) {
-            var username = getUserbyID(timeline[i].user_id)
-            container.innerHTML+="<ul class='timeline_list'>"
-            container.innerHTML+= "<li class='divD'>"+timeline[i].timestamp+"</li>"
-            container.innerHTML+= "<li class='divD'>"+username.username+"</li>"
-            container.innerHTML+= "<li>"+timeline[i].text+"</li>"
-            container.innerHTML+="</ul>"
-            container.innerHTML+="<br>"
-            container.innerHTML+="<br>"
+  var timeline = mockroblog.getPublicTimeline();
+  var container
+  container = document.getElementById('timeline-json');
+
+      for (let i = 0; i < timeline.length; i++) {
+          var username = getUserbyID(timeline[i].user_id)
+          container.innerHTML+="<li class='divD' >"
+          + "<div class='flex-none'>"+"<img src='https://i.imgur.com/aq39RMA.jpg' width='40' height='40' class='rounded-full'>"
+              + "<div class='div_timeline'>"+ "<a href='' class='a_timeline'>"+ username.username+ "</a> <span class='span_timeline2'>"
+              +timeline[i].text+"</span> </div>"
+          +"</div>"
+          + "<div >"+timeline[i].timestamp+"</div>"                      
+          + "</li>"
+          container.innerHTML+="<br>"
     
 }
  }

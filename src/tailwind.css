@@ -85,8 +85,17 @@
     .divD{
         @apply flex justify-between items-center bg-white mt-2 p-2 hover:shadow-lg rounded cursor-pointer transition
     }
-  
-  
+    .div_timeline{
+        @apply flex flex-col ml-2
+    }
+    .a_timeline{
+        @apply font-medium text-green-900 font-bold  hover:text-blue-900
+
+    }   
+    .span_timeline2{
+        @apply text-sm text-gray-700 overflow-ellipsis 
+    }
+    
 
     
 
