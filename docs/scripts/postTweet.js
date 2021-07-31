@@ -10,7 +10,7 @@ tweetButton.addEventListener('click', (e) => {
   let text = postForm.tweet.value
   text = mockroblog.postMessage(userId, text)
   if (text != null && typeof text !== 'undefined') {
-    window.location.replace('/usertimeline.html?username=self')
+    window.location.replace('./usertimeline.html?username=self')
     //  window.localStorage.setItem('user_name', username)
   } else {
     window.alert('Please write something!')

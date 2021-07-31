@@ -13,7 +13,7 @@ registerButton.addEventListener('click', (e) => {
   // if (username === "user" && password === "web_dev") {
   if (result != null) {
     window.alert('Account Created Successfully')
-    window.location.replace('/index.html')
+    window.location.replace('./index.html')
     window.localStorage.setItem('user_name', username)
     // location.reload();
   } else {
