@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +6,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/styles/tailwind.css">
+        <script defer src="scripts/postTweet.js" type="module"></script> 
        
     </head>
     <body >
@@ -32,8 +31,12 @@
         </header>
     
     
-       
-                
+        <!-- form for user to fill out when they want to post a tweet -->
+        <form id="postTweet">
+            <label for="userTweet">Tweet to Post:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <input type="submit" value="Post Tweet" id="postTweetButton">
+          </form>    
     <main class="pl-10">
         <div>
             <p> post tweet  ................</p>
