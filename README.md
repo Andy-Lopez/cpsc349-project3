@@ -23,7 +23,7 @@ A new `npm test` script lints the code and enforces
 ```shell-session
 $ npm run publish
 $ git add docs
-$ git commit -m 'Publishing site updates'
+$ git commit -m 'Publicing site updates'
 $ git push origin main
 
 ```
