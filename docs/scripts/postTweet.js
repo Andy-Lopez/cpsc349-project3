@@ -5,15 +5,15 @@ const tweetButton = document.getElementById('postTweetButton')
 
 tweetButton.addEventListener('click', (e) => {
   e.preventDefault()
-alert(postForm.fname.value)
+alert("Tweet posted: " + postForm.fname.value)
   const userId = 4
   let text = postForm.fname.value
   text = mockroblog.postMessage(userId, text)
   if (text != null) {
-    window.location.replace('/usertimeline.html')
+    window.location.replace('/usertimeline.html?username=self')
     localStorage.setItem('user_name', username)
   } else {
-    alert('Tweet posted')
+    alert('Please write something!')
     location.reload()
   }
 })
