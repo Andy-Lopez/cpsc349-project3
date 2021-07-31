@@ -12,12 +12,12 @@ registerButton.addEventListener('click', (e) => {
 
   // if (username === "user" && password === "web_dev") {
   if (result != null) {
-    alert('Account Created Successfully')
+    window.alert('Account Created Successfully')
     window.location.replace('/index.html')
-    localStorage.setItem('user_name', username)
+    window.localStorage.setItem('user_name', username)
     // location.reload();
   } else {
-    alert('User Already exists')
-    location.reload()
+    window.alert('User Already exists')
+    window.location.reload()
   }
 })
