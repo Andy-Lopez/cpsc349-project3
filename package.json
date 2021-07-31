@@ -7,7 +7,7 @@
     "start": "npx npm-run-all --parallel tailwind browsersync",
     "tailwind": "npx tailwindcss --input src/tailwind.css --output docs/styles/tailwind.css --watch",
     "browsersync": "npx browser-sync start --server docs/ --files \"docs/**/*\"",
-    "publish": "npx @11ty/eleventy --output=docs --pathprefix=cpsc349-project2 --quiet && npx tailwindcss --input styles/tailwind.css --output docs/styles/tailwind.css"
+    "publish": "npx @11ty/eleventy --output=docs --pathprefix=cpsc349-project3 --quiet && npx tailwindcss --input styles/tailwind.css --output docs/styles/tailwind.css"
   },
   "standard": {
     "ignore": [
