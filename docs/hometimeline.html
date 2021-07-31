@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,42 +8,51 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/styles/tailwind.css">
-        <script defer src="scripts/postTweet.js" type="module"></script> 
+        <script defer src="scripts/timeline.js" type="module"></script>  
        
     </head>
     <body >
-        <!-- Added site name to header/NAV -->
-        <header class="text-gray-600 body-font">
-            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                <a class="flex title-font font-medium items-center  text-gray-900 mb-4 md:mb-0">
-                    <img src="/images/twitter.png" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2" class="ml-10 w-20 h-20 text-white p-2 bg-white-500 rounded-full"
-                        viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                    <span class="ml-3 text-4xl ">Mockroblog</span>
-                </a>
-                <nav class="grid grid-cols-5 gap-4 place-content-center m-10">
-                    <a class="a_highligh" href="publishtimeline.html">Publish Timeline</a>
-                    <a class="a_highligh" href="hometimeline.html">Home Timeline</a>
-                    <a class="a_highligh" href="usertimeline.html?username=self">User Timeline</a>                  
-                    <a class="a_highligh" href="aboutUs.html">About Us</a>
-                </nav>
+     <!-- Added site name to header/NAV -->
+     <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center  text-gray-900 mb-4 md:mb-0">
+                <img src="/images/twitter.png" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="ml-10 w-20 h-20 text-white p-2 bg-white-500 rounded-full"
+                    viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                <span class="ml-3 text-4xl ">Mockroblog</span>
+            </a>
+            <nav class="grid grid-cols-5 gap-4 place-content-center m-10">
+                <a class="a_highligh" href="publishtimeline.html">Publish Timeline</a>            
+                <a class="a_highligh" href="usertimeline.html?username=self">User Timeline</a>
+                <a class="a_highligh" href="posttweet.html">Post Tweet</a>
+                <a class="a_highligh" href="aboutUs.html">About Us</a>
+            </nav>
+
+        </div>
+    </header>
+
     
+    <!-- <pre id="timeline-json">
+
+    </pre> -->
+                   
+    <main class="py-10 h-screen bg-gray-300 px-2">
+       
+        <div class="max-w-xl mx-auto bg-gray-100 shadow-lg rounded-lg overflow-auto md:max-w-xl h-full">
+            <div class="md:flex ">
+                <div class="w-full p-4 h-full">
+                    <ul>
+                        <div id="timeline-json" class="overflow-auto h-full">
+
+                        </div>
+                </ul>
+                </div>
             </div>
-        </header>
-    
-    
-        <!-- form for user to fill out when they want to post a tweet -->
-        <form id="postTweet">
-            <label for="userTweet">Tweet to Post:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <input type="submit" value="Post Tweet" id="postTweetButton">
-          </form>    
-    <main class="pl-10">
-        <div>
-            <p> post tweet  ................</p>
         </div>
     </main>
+  
+  
            
     <footer class="text-gray-600 body-font bg-gray-100">
         <div

@@ -6,12 +6,13 @@
     "test": "npx standard",
     "start": "npx npm-run-all --parallel tailwind browsersync",
     "tailwind": "npx tailwindcss --input src/tailwind.css --output docs/styles/tailwind.css --watch",
-    "browsersync": "npx browser-sync start --server docs/ --files \"docs/**/*\""
+    "browsersync": "npx browser-sync start --server docs/ --files \"docs/**/*\"",
+    "publish": "npx @11ty/eleventy --output=docs --pathprefix=cpsc349-project2 --quiet && npx tailwindcss --input styles/tailwind.css --output docs/styles/tailwind.css"
   },
   "standard": {
-      "ignore": [
-          "tailwind.config.js"
-      ]
+    "ignore": [
+      "tailwind.config.js"
+    ]
   },
   "author": "Kenytt Avery",
   "repository": {
@@ -26,5 +27,8 @@
     "tailwindcss": "^2.2.4"
   },
   "keywords": [],
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  }
 }

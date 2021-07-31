@@ -588,6 +588,29 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
+h1{
+  color: red;
+  font-family: serif;
+  font-size: 4rem;
+}
+
+h3{
+  font-family: san-serif;
+  font-size: 2rem;
+}
+
+p{
+  color: green
+}
+
+li{
+  color: green
+}
+
+a{
+  color: blue
+}
+
 .container {
   width: 100%;
 }
@@ -622,11 +645,251 @@ video {
   }
 }
 
-.custom-tailwind {
+.header_footer {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity))
+}
+
+.animate_h1{
+  height: 4rem;
+  width: 100%;
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center
+}
+
+.main_tag{
+  border-width: 2px;
+  text-align: center
+}
+
+.navbar{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+  padding-left: 2.5rem
+}
+
+.nav_link:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(120, 53, 15, var(--tw-bg-opacity));
+}
+
+.nav_link {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.grid_layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem
+}
+
+.grid_layout2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem
+}
+
+.hoover_li {
+  padding-top: 1rem
+}
+
+.hoover_li:hover {
+  --tw-text-opacity: 1;
+  color: rgba(76, 29, 149, var(--tw-text-opacity));
+}
+
+.hooverPurple:hover {
+  --tw-text-opacity: 1;
+  color: rgba(76, 29, 149, var(--tw-text-opacity));
+}
+
+.hooverBlue{
+  --tw-text-opacity: 1;
+  color: rgba(59, 130, 246, var(--tw-text-opacity))
+}
+
+.hooverBlue:hover {
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
+  text-decoration: underline;
+}
+
+.photo_links {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(6, 78, 59, var(--tw-text-opacity))
+}
+
+.photo_links:hover {
+  --tw-text-opacity: 1;
+  color: rgba(153, 27, 27, var(--tw-text-opacity));
+}
+
+.bluebold{
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+  font-weight: 700
+}
+
+.pagination_bar {
+  text-align: center;
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity))
+  color: rgba(6, 95, 70, var(--tw-text-opacity))
+}
+
+.a_highligh {
+  border-radius: 0.25rem
+}
+
+.a_highligh:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+}
+
+.a_highligh {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.a_highligh:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.divD{
+  margin-top: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  padding: 0.5rem
+}
+
+.divD:hover {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.divD {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.div_timeline{
+  margin-left: 0.5rem;
+  display: flex;
+  flex-direction: column
+}
+
+.a_timeline{
+  font-weight: 500;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(6, 78, 59, var(--tw-text-opacity))
+}
+
+.a_timeline:hover {
+  --tw-text-opacity: 1;
+  color: rgba(30, 58, 138, var(--tw-text-opacity));
+}
+
+.span_timeline2{
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity))
+}
+
+.form_input{
+  width: 100%;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity))
+}
+
+.form_input:focus {
+  --tw-border-opacity: 1;
+  border-color: rgba(99, 102, 241, var(--tw-border-opacity));
+}
+
+.form_input {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.form_input:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgba(199, 210, 254, var(--tw-ring-opacity));
+}
+
+.form_input {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form_input_pass{
+  border-radius: 0.25rem;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(99, 102, 241, var(--tw-bg-opacity))
+}
+
+.form_input_pass:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
+}
+
+.form_input_pass {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.form_input_pass:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .sr-only {
@@ -32238,6 +32501,8 @@ video {
 .content-none {
   content: none;
 }
+
+/*  style for h1 */
 
 /* Custom Tailwind classes go here */
 

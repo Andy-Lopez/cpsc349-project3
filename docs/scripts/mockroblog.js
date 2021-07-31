@@ -9,6 +9,56 @@ export function createUser (username, email, password) {
       password: password
     }
   }
+  return null
+}
+export function getUserbyID (id) {
+  if (id === 1 || id === 'ProfAvery') {
+    return {
+      id: 1,
+      username: 'ProfAvery',
+      email: 'kavery@fullerton.edu',
+      password: 'password'
+    }
+  } else if (id === 2|| id === 'KevinAWortman') {
+    return {
+      id: 2,
+      username: 'KevinAWortman',
+      email: 'kwortman@fullerton.edu',
+      password: 'qwerty'
+    }
+  } else if (id === 3|| id === 'Beth_CSUF') {
+    return {
+      id: 3,
+      username: 'Beth_CSUF',
+      email: 'beth.harnick.shapiro@fullerton.edu',
+      password: 'secret'
+    }
+  }}
+export function getFollowedUsers (id) {
+  if (id === 1 || id === 'ProfAvery') {
+    return [2,3]
+  } else if (id === 2|| id === 'KevinAWortman') {
+    return [1,3]
+  } else if (id === 3|| id === 'Beth_CSUF') {
+    return [1,2]
+  }
+
+  return null
+}
+
+export function isfollowing(user_to_check,logged_in) {
+  if (user_to_check === logged_in){
+    return "same"
+  }
+  let verifyuser=getUserbyID(user_to_check).id
+  var users_list = getFollowedUsers(logged_in)
+  for (let i = 0; i < users_list.length; i++){
+    console.log(users_list[i]+" "+verifyuser)
+    if (users_list[i] === verifyuser){
+      return true
+    }
+  }
+  return false
 }
 
 export function authenticateUser (username, password) {

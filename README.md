@@ -20,3 +20,10 @@ Open the [newly generated site](http://localhost:3000/)
 
 A new `npm test` script lints the code and enforces
 [JavaScript Standard Style](https://standardjs.com/).
+```shell-session
+$ npm run publish
+$ git add docs
+$ git commit -m 'Publishing site updates'
+$ git push origin main
+
+```
